@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#21254A"
+    tools:context=".MainActivity">
+
+   <Button
+       android:id="@+id/btnONOFF"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentTop="true"
+       android:layout_marginStart="16dp"
+       android:text="Aç/Kapa" />
+
+   <Button
+       android:id="@+id/btnDiscoverable_on_off"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginStart="120dp"
+       android:onClick="btnEnableDisable_Discoverable"
+       android:text="Keşfetmeyi aç" />
+
+   <Button
+       android:id="@+id/btnFindUnpairedDevices"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_marginStart="292dp"
+       android:layout_marginTop="0dp"
+       android:onClick="btnDiscover"
+       android:text="Tara" />
+
+   <ListView
+       android:id="@+id/lvNewDevices"
+       android:layout_width="match_parent"
+       android:layout_height="150dp"
+       android:layout_below="@id/btnStartConnection"
+       android:layout_alignParentStart="true"
+       android:layout_marginTop="52dp"
+       android:background="#616ABD"
+       android:cacheColorHint="#FFFFFF" />
+
+   <Button
+       android:id="@+id/btnStartConnection"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/btnONOFF"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="49dp"
+       android:text="Bağlantıyı başlat" />
+
+   <EditText
+       android:id="@+id/editText"
+       android:layout_width="300dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/lvNewDevices"
+       android:layout_alignParentStart="true"
+       android:hint="Mesaj"
+       android:textColor="#FFFFFF"
+       android:textColorHint="#FFFFFF" />
+
+   <Button
+       android:id="@+id/btnSend"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/lvNewDevices"
+       android:layout_toRightOf="@+id/editText"
+       android:text="Gönder" />
+
+   <TextView
+       android:id="@+id/incomingMessage"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/editText"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentEnd="true"
+       android:layout_marginTop="10dp"
+       android:text="Gelen mesajlar"
+       android:textColor="#FFFFFF" />
+
+</RelativeLayout>
